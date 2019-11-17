@@ -12,7 +12,7 @@ export default SplitRight
 
 ![](https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg)
 
-# React
+# Mini Curso de React
 
 [https://react-imd-2018.now.sh](https://react-imd-2018.now.sh)
 
@@ -27,7 +27,7 @@ Tópicos
 
 ---
 
-# Olá ✋
+# Quem somos nós? ✋
 
 ```notes
 - C&T.
@@ -40,6 +40,26 @@ Tópicos
 - Agradecimentos
 ```
 
+```notes
+- IMD.
+- Nanodegree de React na udacity
+- Atualmente estagiário na dataprev
+- Passei recentemente em processo seletivo da Codeminer
+
+``
+
+---
+<List title="O que você irá aprender nesse mini curso:"
+  items={[
+    'História do desenvolvimento do web',
+    'O que é React e o porquê de utilizar',
+    'Quais os requisitos necessários para aprender React',
+    'Principais conceitos do React (JSX, Componentes, Props, State)',
+    'Entendendo a estrutura de um projeto React',
+    'Escrever seu primeiro aplicativo usando React',
+    'Desafio'
+  ]} 
+/>
 ---
 ## Todos os códigos são copiáveis 👌
 
@@ -47,103 +67,20 @@ Tópicos
 - Códigos em inglês da doc do React
 ```
 ---
-## Dia 1
-  
-<ul style={{ textAlign: 'left' }}>
-  <li>Javascript</li>
-  <li>ES6 e Manipulação de arrays</li>
-  <li>Exercício</li>
-  <li>React</li>
-  <li>JSX, Componentes, Props, State</li>
-  <li>Formulários</li>
-  <li>Pausa</li>
-  <li>Create React App</li>
-  <li>Prática</li>
-</ul>
+
+### História do Desenvolvimento Web ( Gabriel )
 ---
-
-## Dia 2
-
-* Padrões avançados para criação componentes
-* Ecossistema React
-* State management
-* styles
-* Integrando em uma aplicação já existente (case BR-PlantExpert)
-* Bundlers  
-
-```notes
-- Um pouco de muitas coisas
-```
+### O que é React e o porquê de utilizar ( Gabriel e Thayrone )
 ---
-<Image src={require("file-loader!./imgs/flavors.png")} size="80%" />
-
-```notes
-Flavors - Sabores
-ES6 bem estabelecido
-Destaque para Typescript que vem crescendo
-```
+### Quais os requisitos necessários para aprender React ( Thayrone )
 ---
-<Image src={require("file-loader!./imgs/flavors-brazil.png")} size="30%" />
+### Principais conceitos do React (JSX, Componentes, Props, State) ( Thayrone  e Gabriel)
 ---
-<Image src={require("file-loader!./imgs/libs.png")} size="80%" />
-
-```notes
-Frontend
-
-React ainda é dominante
-Vue vem ganhando força
-Angular vem perdendo
-```
+### Entendendo a estrutura de um projeto React ( Gabriel)
 ---
-<Image src={require("file-loader!./imgs/backend-javascript.png")} size="80%" />
-
-```notes
-Backend
-
-Alto número de desenvolvedores que não conhecem as libs
-```
+### Escrevendo seu primeiro aplicativo em React ( Gabriel)
 ---
-[Opiniões](https://2017.stateofjs.com/2017/opinions/)
----
-### ECMAScript / Javascript
-### ES6 / ES2015
----
-## Ecossistema
-
-```notes
-AI
-Servidor
-Jogos
-Mobile multiplataforma
-```
----
-## Ecossistema
-
-* [Scribbletune](http://scribbletune.com/)
-* [Electron](https://electronjs.org/)
-* [Tensorflow](https://js.tensorflow.org/)
-* Web-scrapping
-* BOTs de mensagens
-* CLI's
-
----
-## Ecossistema
-
-* Aplicações Web
-* PDF
-* Hardware - [johnny-five](https://github.com/rwaldron/johnny-five)
-* Real-time - [socket.io](https://socket.io/)
-* Conexão com bancos de dados
-* [Automação de desktop - Google Chrome IAMDinosaur](https://github.com/ivanseidel/IAMDinosaur)
----
-
-### Recomendação - Event Loop
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8aGhZQkoFbQ" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
-
-```notes
-Os problemas das frameworks atuais podem ser resolvidos com entendimento do EventLoop
-```
+### Desafio
 ---
 # ES6 e manipulação de arrays
 
@@ -261,7 +198,7 @@ Dá pra imitar os parâmetros nomeados do python
 ## Interpolação de strings
 
 ```javascript
-function getNome({ nome, sobrenome }) {
+function getNome({ nome, sobreno  me }) {
   return `${nome} ${sobrenome}`;
 }
 ```
