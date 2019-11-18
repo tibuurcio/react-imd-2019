@@ -38,6 +38,7 @@ Tópicos
 - Plataforma LoP
 - Logique Sistemas
 - Agradecimentos
+- React Community
 ```
 
 ```notes
@@ -46,12 +47,26 @@ Tópicos
 - Atualmente estagiário na dataprev
 - Passei recentemente em processo seletivo da Codeminer
 
-``
+```
 
 ---
+
+<List title="Um pouco sobre vocês"
+  items={[
+    'Básico de HTML, CSS, JavaScript?',
+    'Já trabalha ou faz estágio na área?',
+    'Backend vs Frontend?',
+    'Fullstack Developer?',
+    'Já usou React?',
+    'Já usou alguma outra framework Frontend? (Angular, Vue, etc...)'
+  ]} 
+/>
+
+---
+
 <List title="O que você irá aprender nesse mini curso:"
   items={[
-    'História do desenvolvimento do web',
+    'Um pouco sobre aplicações web',
     'O que é React e o porquê de utilizar',
     'Quais os requisitos necessários para aprender React',
     'Principais conceitos do React (JSX, Componentes, Props, State)',
@@ -60,19 +75,84 @@ Tópicos
     'Desafio'
   ]} 
 />
+
 ---
+
 ## Todos os códigos são copiáveis 👌
 
-```notes
-- Códigos em inglês da doc do React
-```
 ---
 
-### História do Desenvolvimento Web ( Gabriel ) 5min
+### Um pouco sobre aplicações web
+
 ---
-### O que é React e o porquê de utilizar ( Gabriel e Thayrone ) 5min
+
+### Renderizando no servidor
+
+<img src={require("file-loader!./imgs/arq-1.png")} style={{ marginBottom: 16 }}/>
+
+#### Rails, Java (JPA & JSP), PHP, Python (Django)
+
 ---
-### Quais os requisitos necessários para aprender React ( Thayrone ) 
+
+### Renderizando no servidor + AJAX
+
+<img src={require("file-loader!./imgs/arq-2.png")} />
+
+---
+
+### SPA - Single Page Applications
+
+<img src={require("file-loader!./imgs/arq-3.png")} />
+
+```notes
+Pra que seja possível criar aplicações utilizando JavaScript foram desenvolvidas várias frameworks
+```
+
+---
+
+### O que é React e o porquê de utilizar
+
+---
+
+# React
+
+<Appear>
+  <p>Uma biblioteca Javascript para construir interfaces de usuário</p>
+  <img src={require("file-loader!./imgs/react-definition.png")} />
+</Appear>
+
+---
+
+<List title="Ainda segundo o facebook"
+  items={[
+    'Declarativo',
+    'Baseado em componentes',
+    'Learn Once, Write Anywhere'
+  ]} 
+/>
+
+```notes
+Aprenda uma única vez, escreva onde quer que seja
+```
+
+---
+
+<List title="React é como uma interface Java"
+  items={[
+    'ReactDOM',
+    'ReactNative',
+    'mdx-deck',
+    'Framer',
+    'ReactPDF',
+    'ReactWord',
+    'ReactVR',
+    'Netflix React para TV'
+  ]} 
+/>
+
+---
+
+### Quais os requisitos necessários para aprender React
  <ul style={{ textAlign: 'left' }}>
   <li>Webpack</li>
   <li>Babel</li>
@@ -80,22 +160,9 @@ Tópicos
   <li>CSS3</li>
   <li>JS</li>
 </ul>
----
-## Arrow Functions
-```javascript
-function sum(a, b) {
-  return a + b
-}
-
-const sum = (a, b) => {
-  return a + b
-}
-
-const sum = (a, b) => a + b
-
-```
 
 ---
+
 ## Array.map
 
 ```javascript
@@ -110,163 +177,30 @@ var shortNameMonths = months.map(function(month) {
 
 console.log(shortNameMonths); // ['JAN', 'FEB', ...]
 ```
----
-## Array.filter
 
-```javascript
-var months = [
-  { shortName: 'JAN', fullName: 'January', number: 1 },
-  { shortName: 'FEB', fullName: 'February', number: 2 }
-];
+---
 
-var firstSemester = months.filter(function(month) {
-  return month.number <= 6;
-});
+<List title="Principais conceitos"
+  items={[
+    'JSX',
+    'Props',
+    'State',
+    'Apenas JavaScript'
+  ]} 
+/>
 
-console.log(firstSemester); // ['JAN', 'FEB', .. , 'JUN']
-```
 ---
-### Principais conceitos do React (JSX, Componentes, Props, State) ( Thayrone  e Gabriel)
+
+### Entendendo a estrutura de um projeto React
+
 ---
-### Entendendo a estrutura de um projeto React ( Gabriel)  30min
+
+### Escrevendo seu primeiro aplicativo em React
+
 ---
-### Escrevendo seu primeiro aplicativo em React ( Gabriel)
----
+
 ### Desafio
----
 
-# React
-
-<Appear>
-  <p>Uma biblioteca Javascript para construir interfaces de usuário</p>
-  <img src={require("file-loader!./imgs/react-definition.png")} />
-</Appear>
-
-```notes
-Quem tá dizendo?
-```
----
-# ES6 e manipulação de arrays
-
-```notes
-React API muito simples
-Muito mais saber Javascript
-```
----
-## Destructuring
-
-```javascript
-// Arrays
-const array = [1, 2];
-const [a, b] = array;
-
-// Objetos
-const aluno = {
-  nome: 'Gabriel',
-  sobrenome: 'Tibúrcio',
-  linguagemFavorita: 'Javascript'
-};
-
-const { nome, linguagemFavorita } = aluno;
-```
----
-## Parâmetros nomeados com destructuring
-
-```javascript
-function getNome(data) {
-  return data.nome + ' ' + data.sobrenome;
-}
-
-function getNome({ nome, sobrenome }) {
-  return nome + ' ' + sobrenome;
-}
-```
-
-```notes
-Dá pra imitar os parâmetros nomeados do python
-```
----
-## Interpolação de strings
-
-```javascript
-function getNome({ nome, sobreno  me }) {
-  return `${nome} ${sobrenome}`;
-}
-```
-
-```notes
-Tem bem mais coisa que dá pra fazer com interpolação de strings
-```
----
-## Classes
-
-```javascript
-class Pessoa {
-  constructor(nome, sobrenome = '') {
-    this.nome = nome;
-    this.sobrenome = sobrenome;
-  }
-
-  getNomeCompleto() {
-    return `${this.nome} ${this.sobrenome}`;
-  }
-}
-
-const pessoa = new Pessoa('Gabriel', 'Tibúrcio');
-pessoa.getNomeCompleto(); // 'Gabriel Tibúrcio'
-```
----
-# [Exercício](https://codesandbox.io/s/k3r9kv15wv)
----
-
-# React
-
-<Appear>
-  <p>Uma biblioteca Javascript para construir interfaces de usuário</p>
-  <img src={require("file-loader!./imgs/react-definition.png")} />
-</Appear>
-
-```notes
-Quem tá dizendo?
-```
----
-<List title="Ainda segundo o facebook"
-  items={[
-    'Declarativo',
-    'Baseado em componentes',
-    'Learn Once, Write Anywhere'
-  ]} 
-/>
----
-<List title="React é como uma interface"
-  items={[
-    'ReactDOM',
-    'ReactNative',
-    'Framer',
-    'ReactPDF',
-    'ReactWord',
-    'ReactVR',
-    'Netflix React para TV'
-  ]} 
-/>
----
-<List title="Design decisions"
-  items={[
-    'Dificuldade de lidar com dados mudando ao longo do tempo',
-    'Separação de responsabilidades artificial',
-    'Criação de componentes',
-    'Re-render em cada atualização',
-    'Acessibilidade de templates',
-    'Poder de Javascript'
-  ]} 
-/>
-
-```notes
-- Kyle Simpson - tempo é o fator mais complicado em uma aplicação
-- Separar templates e lógica não separa responsabilidade
-- Separa responsabilidades de forma artificial, colocando template e lógica em arquivos separados 
-- React separa responsabilidades com componentes isolados que contém ambos template e lógica
-```
 ---
 
 ## Hello World
@@ -282,8 +216,6 @@ ReactDOM.render(
 - Não é HTML nem Javascript
 ```
 ---
-## [Exemplo](https://codesandbox.io/s/3y8y7kp3nq)
----
 ## [JSX](https://babeljs.io/repl/#?babili=false&browsers=&build=&builtIns=false&spec=false&loose=false&code_lz=JYWwDg9gTgLgBAJQKYEMDG8BmUIjgcilQ3wG4AoctCAOwGd4kAbJEJGmCOAXjgB4AFgEYAfAAlmTCABo4Ad2hMAJgEI-AemEjSQA&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=true&fileSize=true&timeTravel=false&sourceType=module&lineWrap=true&presets=es2016%2Creact%2Cstage-3&prettier=false&targets=&version=6.26.0&envVersion=)
 
 ```jsx
@@ -295,7 +227,9 @@ const elemento = <h1>Hello, world!</h1>;
 - Um dos diferenciais do React
 - Dá pra usar Vue com JSX
 ```
+
 ---
+
 #### Expressões em JSX (template interpolation)
 
 ```jsx
@@ -307,7 +241,9 @@ ReactDOM.render(
   document.getElementById('root')
 );
 ```
+
 ---
+
 #### Qualquer expressão JS é válida
 
 ```jsx
@@ -342,6 +278,7 @@ Podemos:
 - Retornar de funções
 ```
 ---
+
 #### JSX className e camelCase para atributos
 
 ```jsx
@@ -435,21 +372,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 ```notes
 Estrutura base de uma página em React
 ```
----
-### JSX não é necessário
 
-```javascript
-class Hello extends React.Component {
-  render() {
-    return React.createElement('div', null, `Hello ${this.props.name}`);
-  }
-}
-
-ReactDOM.render(
-  React.createElement(Hello, { name: 'Gabriel' }, null),
-  document.getElementById('root')
-);
-```
 ---
 ## State
 
@@ -1078,6 +1001,7 @@ this.setState({
   keys: {}
 });
 ```
+
 ---
 
 Prática
@@ -1095,82 +1019,7 @@ Prática
   <li>Deploy (Now, Firebase, Netlify, Heroku, Github pages, Azure)</li>
 </Appear>
 </ul>
----
-Estados
 
-[https://www.geonames.org/childrenJSON?geonameId=3469034](https://www.geonames.org/childrenJSON?geonameId=3469034)
-```json
-{
-  "geonames": [
-    {
-      "geonameId": 3390290,
-      "name": "Rio Grande do Norte"
-    }
-  ]
-}
-```
----
-Cidades
-
-[https://www.geonames.org/childrenJSON?geonameId=3390290](https://www.geonames.org/childrenJSON?geonameId=3390290)
-
-```json
-{
-  "geonames": [
-    {
-      "geonameId": 6320189,
-      "name": "Natal"
-    }
-  ] 
-}
-```
----
-Bairros
-
-[https://www.geonames.org/childrenJSON?geonameId=6320189](https://www.geonames.org/childrenJSON?geonameId=6320189)
-
-```json
-{
-  "geonames": [
-    {
-      "name": "Ponta Negra"
-    }
-  ] 
-}
-```
----
-import ExemploPratica from './components/ExemploPratica.jsx';
-
-<ExemploPratica />
-
-```notes
-Dicas:
-- a ideia não é terminar hoje, e sim pensar sobre o problema
-- podemos fazer a primeira requisição pelos estados assim que o componente é criado
-- não podemos fazer logo a de municípios pois não sabemos qual estado
-- o método handleChange não pode simplesmente mudar o estado, pois não temos as informações ainda
-- lembrar do loading
-- discutir como podemos representar o state da página
-```
----
-Exemplo requisição
-```jsx
-import axios from 'axios';
-
-componentDidMount() {
-  axios.get('https://api.github.com/users/tibuurcio').then(res => {
-    this.setState({
-      imagemUrl: res.data.imagem_url
-    });
-  }).catch(console.error);
-}
-```
----
-renderProps
----
-React Suspense (lidar com código assíncrono)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/v6iR3Zk4oDY" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
----
 ## Próximos passos
 
 * [React Docs](https://reactjs.org/docs/)
@@ -1179,9 +1028,3 @@ React Suspense (lidar com código assíncrono)
 * [Integrando CRA com Typescript](https://github.com/Microsoft/TypeScript-React-Starter)
 * [Next.js](https://nextjs.org/) - Renderização no servidor com React
 * [Gatsby](https://www.gatsbyjs.org/) - Gerador de sites estáticos (blog, documentação)
-
-```notes
-Next.js
-Gastby semelhante ao Jekyll (Ruby), Wordpress (PHP)
-```
----
