@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { Appear, Image } from 'mdx-deck';
 import List from './components/List.jsx';
 import { CodeSurfer } from "mdx-deck-code-surfer";
+import { LiveCode } from 'mdx-deck-live-code';
 import nightOwl from "prism-react-renderer/themes/nightOwl";
 import { SplitRight } from 'mdx-deck/layouts';
 
@@ -14,7 +15,7 @@ export default SplitRight
 
 # Mini Curso de React
 
-[https://react-imd-2018.now.sh](https://react-imd-2018.now.sh)
+[https://react-imd-2019.now.sh](https://react-imd-2019.now.sh)
 
 ```notes
 Notas visíveis apenas para mim
@@ -125,7 +126,7 @@ Pra que seja possível criar aplicações utilizando JavaScript foram desenvolvi
 
 <List title="Ainda segundo o facebook"
   items={[
-    'Declarativo',
+    'Declarativo (vs Imperativo)',
     'Baseado em componentes',
     'Learn Once, Write Anywhere'
   ]} 
@@ -152,6 +153,30 @@ Aprenda uma única vez, escreva onde quer que seja
 
 ---
 
+<List title="Possui um ecossistema enorme"
+  items={[
+    'Comunidade',
+    'Bibliotecas',
+    'Dúvidas'
+  ]} 
+/>
+
+---
+
+### Frameworks mais utilizadas - 2019
+
+<img src={require("file-loader!./imgs/web-frameworks-2019.png")} />
+
+---
+
+export default SplitRight
+
+<img src={require("file-loader!./imgs/most-dreaded-frameworks-2019.png")} />
+
+<img src={require("file-loader!./imgs/most-loved-frameworks-2019.png")} />
+
+---
+
 ### Quais os requisitos necessários para aprender React
  <ul style={{ textAlign: 'left' }}>
   <li>Webpack</li>
@@ -160,23 +185,6 @@ Aprenda uma única vez, escreva onde quer que seja
   <li>CSS3</li>
   <li>JS</li>
 </ul>
-
----
-
-## Array.map
-
-```javascript
-const months = [
-  { shortName: 'JAN', fullName: 'January', number: 1 },
-  { shortName: 'FEB', fullName: 'February', number: 2 }
-];
-
-var shortNameMonths = months.map(function(month) {
-  return month.shortName;
-});
-
-console.log(shortNameMonths); // ['JAN', 'FEB', ...]
-```
 
 ---
 
@@ -191,11 +199,49 @@ console.log(shortNameMonths); // ['JAN', 'FEB', ...]
 
 ---
 
+### Styles
+
+---
+
+<CodeSurfer
+  title="ButtonSwitch"
+  theme={nightOwl}
+  code={require("!raw-loader!./components/ButtonSwitch.jsx")}
+  showNumbers={true}
+  steps={[
+    { lines: [6] },
+    { range: [18, 27], notes: 'this.handleClick' },
+    { range: [12, 27] },
+    { lines: [8, 9] },
+    { range: [1, 27] }
+  ]}
+/>
+
+---
+
 ### Entendendo a estrutura de um projeto React
 
 ---
 
 ### Escrevendo seu primeiro aplicativo em React
+
+---
+
+### Listas - Um pouquinho de JavaScript
+
+```javascript
+const meses = [
+  { shortName: 'Jan', fullName: 'Janeiro', indice: 0 },
+  { shortName: 'Fev', fullName: 'Fevereiro', indice: 1 },
+  { shortName: 'Mar', fullName: 'Março', indice: 2 }
+];
+
+const fullNames = meses.map(function(mes) {
+  return mes.fullName;
+});
+
+console.log(fullNames); // ['Janeiro', 'Fevereiro', 'Março']
+```
 
 ---
 
