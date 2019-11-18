@@ -68,31 +68,38 @@ Tópicos
 ```
 ---
 
-### História do Desenvolvimento Web ( Gabriel )
+### História do Desenvolvimento Web ( Gabriel ) 5min
 ---
-### O que é React e o porquê de utilizar ( Gabriel e Thayrone )
+### O que é React e o porquê de utilizar ( Gabriel e Thayrone ) 5min
 ---
-### Quais os requisitos necessários para aprender React ( Thayrone )
+### Quais os requisitos necessários para aprender React ( Thayrone ) 
+ <ul style={{ textAlign: 'left' }}>
+  <li>Webpack</li>
+  <li>Babel</li>
+  <li>HTML5</li>
+  <li>CSS3</li>
+  <li>JS</li>
+</ul>
 ---
-### Principais conceitos do React (JSX, Componentes, Props, State) ( Thayrone  e Gabriel)
----
-### Entendendo a estrutura de um projeto React ( Gabriel)
----
-### Escrevendo seu primeiro aplicativo em React ( Gabriel)
----
-### Desafio
----
-# ES6 e manipulação de arrays
+## Arrow Functions
+```javascript
+function sum(a, b) {
+  return a + b
+}
 
-```notes
-React API muito simples
-Muito mais saber Javascript
+const sum = (a, b) => {
+  return a + b
+}
+
+const sum = (a, b) => a + b
+
 ```
+
 ---
 ## Array.map
 
 ```javascript
-var months = [
+const months = [
   { shortName: 'JAN', fullName: 'January', number: 1 },
   { shortName: 'FEB', fullName: 'February', number: 2 }
 ];
@@ -119,47 +126,31 @@ var firstSemester = months.filter(function(month) {
 console.log(firstSemester); // ['JAN', 'FEB', .. , 'JUN']
 ```
 ---
-## Array.reduce
+### Principais conceitos do React (JSX, Componentes, Props, State) ( Thayrone  e Gabriel)
+---
+### Entendendo a estrutura de um projeto React ( Gabriel)  30min
+---
+### Escrevendo seu primeiro aplicativo em React ( Gabriel)
+---
+### Desafio
+---
 
-```javascript
-var months = [
-  { shortName: 'JAN', fullName: 'January', number: 1, total: 31 },
-  { shortName: 'FEB', fullName: 'February', number: 2, total: 28 },
-  { shortName: 'MAR', fullName: 'March', number: 3, total: 30 }
-];
+# React
 
-var days = months.reduce(function(acc, month) {
-  return acc + month.total;
-}, 0);
+<Appear>
+  <p>Uma biblioteca Javascript para construir interfaces de usuário</p>
+  <img src={require("file-loader!./imgs/react-definition.png")} />
+</Appear>
 
-console.log(days); // 365
+```notes
+Quem tá dizendo?
 ```
 ---
-## Parâmetros default
+# ES6 e manipulação de arrays
 
-```javascript
-function multiplicar(x, y = 1) {
-  return x * y;
-}
-
-multiplicar(3, 2); // 6
-multiplicar(3); // 3
-```
----
-## Arrow functions
-
-```javascript
-var sum = function(x, y) {
-  return x + y;
-};
-
-const sum = (x, y) => {
-  return x + y;
-};
-
-const sum = (x, y) => x + y;
-
-sum(1, 2); // 3
+```notes
+React API muito simples
+Muito mais saber Javascript
 ```
 ---
 ## Destructuring
